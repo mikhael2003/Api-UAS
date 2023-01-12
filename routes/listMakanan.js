@@ -29,7 +29,7 @@ router.get('/', async (req, res) => {
     try {
         //ListMakanann diambil dari  yang menampung models
         const listMakanan = await ListMakanan.find()
-        res.send(listMakanan)
+        res.json(listMakanan)
     } catch (error) {
         res.json({
             message: error

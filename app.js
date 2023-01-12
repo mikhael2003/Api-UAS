@@ -13,10 +13,12 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 
 // (7) import routes
-const listPembeli = require("./routes/listMakanan")
+const listPembeli = require("./routes/listpembeli")
+const listmakanan = require('./models/listmakanan')
 
 // (8) app.use (mendaftarkan middleware baru ke Express)
-app.use("/listmakanan", listPembeli)
+app.use("/listmakanan", listmakanan)
+app.use("/listpembeli", listPembeli)
 
 // (3) koneksi ke database mongodb
 mongoose.connect(process.env.DB_CONNECTION, {
