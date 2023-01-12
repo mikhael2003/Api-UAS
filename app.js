@@ -1,6 +1,7 @@
 // (1) definisikan module, middleware
 const express = require('express')
 const app = express()
+const cors = require('cors')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 require('dotenv/config')
@@ -11,9 +12,10 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 app.use(bodyParser.json());
+app.use(cors())
 
 // (7) import routes
-const listPembeli = require("./routes/listpembeli")
+const listPembeli = require("./routes/listPembeli")
 const listmakanan = require('./models/listmakanan')
 
 // (8) app.use (mendaftarkan middleware baru ke Express)
