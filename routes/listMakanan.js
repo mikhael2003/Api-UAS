@@ -27,8 +27,9 @@ router.post('/', async (req, res) => {
 // Read
 router.get('/', async (req, res) => {
     try {
-        const listMakanan = await listMakanan.find()
-        res.json(listMakanan)
+        //ListMakanann diambil dari  yang menampung models
+        const listMakanan = await ListMakanan.find()
+        res.send(listMakanan)
     } catch (error) {
         res.json({
             message: error
