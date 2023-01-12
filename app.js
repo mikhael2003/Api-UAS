@@ -16,7 +16,7 @@ app.use(cors())
 
 // (7) import routes
 const listPembeli = require("./routes/listPembeli")
-const listmakanan = require('./models/listmakanan')
+const listmakanan = require('./routes/listmakanan')
 
 // (8) app.use (mendaftarkan middleware baru ke Express)
 app.use("/listmakanan", listmakanan)
