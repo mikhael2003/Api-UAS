@@ -1,6 +1,6 @@
 // (5) Buat router Mahasiswa
 const express = require('express')
-const ListPembeli = require('../models/ListPembeli')
+const ListPembeli = require('../models/listpembeli')
 const router = express.Router()
 
 
