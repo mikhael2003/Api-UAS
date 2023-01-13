@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 app.use(cors())
 
 // (7) import routes
-const listPembeliRoutes = require("./routes/listPembeli")
+const listPembeliRoutes = require("./routes/listpembeli")
 const listMakananRoutes = require('./routes/listMakanan')
 
 // (8) app.use (mendaftarkan middleware baru ke Express)
